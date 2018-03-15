@@ -11,8 +11,9 @@
 
 ;	(3 * 33) = ?
 	LDI R17, 33  ; load 33 in R16
-	ADD R17, 33		
-	ADD R17, 33
+	LDI r19, 3
+	mul r17, r19  ; load multiplication in r0
+
 
 ;	(55 - 12) = ?
 	LDI R18, 55
@@ -21,4 +22,6 @@
 ;	34 + (55 - 12) + (3 * 33) = ?
 	LDI R16, 34
 	ADD R16, R18
-	ADD R16, R17
+	ADD R16, R0
+
+
